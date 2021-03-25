@@ -1,4 +1,4 @@
-package com.example.notdoom.ui.slideshow;
+package com.example.notdoom.ui.collection;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.notdoom.R;
 
-public class SlideshowFragment extends Fragment {
+public class CollectionFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private CollectionViewModel galleryViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        galleryViewModel =
+                new ViewModelProvider(this).get(CollectionViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_collection, container, false);
+        final TextView textView = root.findViewById(R.id.text_collection);
+        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

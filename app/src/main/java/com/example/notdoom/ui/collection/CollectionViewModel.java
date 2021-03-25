@@ -1,16 +1,16 @@
-package com.example.notdoom.ui.gallery;
+package com.example.notdoom.ui.collection;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class CollectionViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public CollectionViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("COLLECTION");
     }
 
     public LiveData<String> getText() {
